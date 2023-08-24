@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    position: relative;
+}
+
+header div {
+    display: flex;
+    background-color: aqua;
+    margin: 0px;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-title {
+    padding: 20px;
+    margin: 0px;
+}
+
+#header-plus-button {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    height: 100%;
+    margin: 0%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+section {
+    background-color: pink;
+    height: 90vh;
+}
