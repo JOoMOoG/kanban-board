@@ -1,42 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
+}
+
+.main-content-area {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 10% auto;
 }
 
 header {
-    position: relative;
-}
-
-header div {
-    display: flex;
-    background-color: aqua;
-    margin: 0px;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
+  background-color: #4788f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 1.2rem "Overlock", sans-serif;
+  color: white;
 }
 
 #header-title {
-    padding: 20px;
-    margin: 0px;
+  margin: 0%;
 }
 
 #header-plus-button {
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    height: 100%;
-    margin: 0%;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  position: absolute;
+  right: 0%;
+  margin: 20px;
 }
 
-section {
-    background-color: pink;
-    height: 90vh;
+.menu-nav {
+  background-color: #e9ebed;
+}
+
+.menu-search {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-search__bar {
+  border-radius: 5px;
+  border-width: 0px;
+  height: 50%;
+  width: 90%;
+}
+#menu-title {
+  height: 30%;
+}
+#menu-title h2 {
+  margin: 0%;
+  margin-left: 20px;
+  position: relative;
+  top: 60%;
+  color: #8d929a;
+  font: 300 1.2rem "Quicksand", sans-serif;
+  letter-spacing: 0.1rem;
+}
+#menu-kanban-title {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#menu-kanban-title h5 {
+  margin: 0%;
+  margin-left: 20px;
+  font: 300 1.2rem "Quicksand", sans-serif;
+  color: #8d929a;
+}
+.kanban-boards-area {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .main-content-area {
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+  }
+  header {
+   grid-area: header;
+  }
+  .menu-nav {
+    grid-area: sidebar;
+  }
+  .kanban-boards-area{
+    background-color: aqua;
+    display: block;
+  }
 }

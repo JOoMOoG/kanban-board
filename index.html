@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanban Board</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Kanban Boards</title>
 </head>
-
 <body>
+  <div class="main-content-area">
     <header>
-        <div>
-            <h1 id="header-title">Kanban Board</h1>
-        </div>
-        <h1 id="header-plus-button">+</h1>
+      <h1 id="header-title">Kanban Board</h1>
+      <h1 id="header-plus-button">+</h1>
     </header>
-    <section>
-        <h1>Your workspace</h1>
-        <h2>My kanbans</h2>
+    <section class="menu-nav">
+      <div class="menu-search">
+        <input type="text" name="search" id="menu-search__bar" placeholder="Boards">
+      </div>
+      <div id="menu-title">
+        <h2>YOUR WORKSPACES</h2>
+      </div>
+      <div id="menu-kanban-title">
+        <h5>Kanban Boards</h5>
+      </div>
+      <div id="menu-kanbam-boards"></div>
     </section>
-
+    <section class="kanban-boards-area">This is the areas of kanban boards</section>
+  </div>
+  
 </body>
-
 </html>
