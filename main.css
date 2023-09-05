@@ -1,100 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0px;
 }
-
-.main-content-area {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-rows: 10% auto;
-}
-
-header {
-  background-color: #4788f1;
+.kanban-header{
   display: flex;
-  align-items: center;
   justify-content: center;
-  font: 400 1.2rem "Overlock", sans-serif;
+  align-items: center;
+  background-color: #008DFB;
   color: white;
+  height: 10vh;
 }
-
-#header-title {
-  margin: 0%;
+.kanban-header h1{
+  font: 500 1.8rem "Roboto", sans-serif; 
+  margin: 1rem;
 }
-
-#header-plus-button {
+#kanban-header__button{
   position: absolute;
   right: 0%;
-  margin: 20px;
 }
-
-.menu-nav {
-  background-color: #e9ebed;
+.kanban-section{
+  height: 90vh;
+  background-color:#E8EDF1;
+  position: relative; 
 }
-
-.menu-search {
-  height: 10%;
-  width: 100%;
+.kanban-section h1{
+  margin: 0rem;
+  position: absolute;
+  top: 15%;
+  left: 12.8px;
+  font: 100 1.5rem "Roboto", sans-serif; 
+  letter-spacing: 0.3rem;
+  color: #717E88;
+}
+.kanban-boards{
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  width: 100vw;
+}
+.kanban-boards {
+  margin: 0rem;
+  padding: 0rem;
+  background-color: white;
+}
+.kanban-boards li{
+  margin: 0.2rem;
+  background-color: aqua;
+  list-style: none;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-#menu-search__bar {
-  border-radius: 5px;
-  border-width: 0px;
-  height: 50%;
-  width: 90%;
+.kanban-boards div{
+  height: 28px;
+  width: 28px;
+  background-color: red;
+  border-radius: 6px;
+  margin: 0.6rem
 }
-#menu-title {
-  height: 30%;
-}
-#menu-title h2 {
-  margin: 0%;
-  margin-left: 20px;
-  position: relative;
-  top: 60%;
-  color: #8d929a;
-  font: 300 1.2rem "Quicksand", sans-serif;
-  letter-spacing: 0.1rem;
-}
-#menu-kanban-title {
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.kanban-boards h2{
+  margin: 0rem;
+  font: 100 1.5rem "Roboto", sans-seri;
+  color: #717E88;
 }
 
-#menu-kanban-title h5 {
-  margin: 0%;
-  margin-left: 20px;
-  font: 300 1.2rem "Quicksand", sans-serif;
-  color: #8d929a;
-}
-.kanban-boards-area {
-  display: none;
-}
-@media (min-width: 40rem) {
-  .main-content-area {
-    grid-template-columns: 30% auto;
-    grid-template-areas:
-      "header header"
-      "sidebar content";
-  }
-  header {
-   grid-area: header;
-  }
-  .menu-nav {
-    grid-area: sidebar;
-  }
-  .kanban-boards-area{
-    background-color: aqua;
-    display: block;
-  }
-}
