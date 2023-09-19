@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
+  <script src="mobile.js" defer></script>
   <title>Kanban-Board</title>
 </head>
 <body>
+  <section class="modal-hidden">
+    <h1>New Kanban</h1>
+    <input type="text">
+    <button>CREATE</button>
+  </section>
   <header class="kanban-header">
     <h1>Kanban Board</h1>
     <h1 id="kanban-header__button">+</h1>
   </header>
-  <section class="kanban-section">
+    <section class="kanban-section">
     <h1>My Boards</h1>
       <ul class="kanban-boards">
         <li>
